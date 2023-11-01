@@ -1,0 +1,30 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+
+loadamberparams ligand.frcmod
+loadamberparams frcmod.ionsjc_tip3p
+
+p = loadpdb protein.pdb
+l = loadmol2 ligand.mol2
+c = combine { p l }
+
+
+savepdb p pro.pdb
+savepdb l lig.pdb 
+savepdb c com.pdb
+saveamberparm p pro.top pro.crd 
+saveamberparm l lig.top lig.crd 
+saveamberparm c com.top com.crd
+
+solvatebox c TIP3PBOX 12.0
+
+charge c
+addions c Cl- 0 
+addions c Na+ 0 
+
+savepdb c pep.pdb
+saveamberparm c pep.top pep.crd
+
+quit
+####
