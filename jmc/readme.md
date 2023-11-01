@@ -15,7 +15,7 @@
      `-i` lig_h.pdb-fi pdb: -i, 参数i, 表明输入(input)； ligand_h.pdb, 输入的文件; -fi, 参数f,文件(file)格式, pdb, 表示输入的格式为pdb 。(注：该pdb文件必须包含详细的成键信 息)
      `-o` ligand1.mol2 -fo mol2: -o, 参数o, 表明输入(output)【下同】; ligand.mol2, 输出的文件;mol2,规定输出文件的格式为mol2 。
      `-c` bcc：采用的方法为bcc。
-     `-nc` − n c -\mathrm{nc}−nc, 电荷的数量(number of charge): 0 。（根据各自体系填写)
+     `-nc` − nc, 电荷的数量(number of charge): 0 。（根据各自体系填写)
     `- &`：后台运行符
   完成后会产生ligand.mol2文件。
   
