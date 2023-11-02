@@ -10,7 +10,7 @@ lig_mut.top  ## 不需要改变
 pro_mut.top com_mut.top  ## 需要改变的
 
  1. 对pro_mutant.pdb文件在需要替换成丙氨酸的位置（一般是前面能量分解后比较重要的氨基酸）进行修改，只需将某残基的CA，C，N原子保留，其他的删除，并将残基名称改为ALA。经过leap后，原来的残基就被替换为丙氨酸，得到了突变后的top信息（lig_mut.toppro_mut.top com_mut.top）。`vi pro_mutant.pdb` 这是未修改的蛋白文件，现在我们需要把338号残基SER突变为ALA
-![输入图片说明](/imgs/2023-11-02/Rk7zxAgvWEFB4Ar5.png)
+![输入图片说明](/jmc_md/ala/ala1.png)
 ctrl + v 然后往下拉，往右拉选择需要替换的的残基，按s后输入ALA按两下esc就会批量填充。`:wq`保存后退出
  2. `tleap -sf leap.in`   此时生成的`pro_mut.top` `lig_mut.top`
     `com_mut.top`才是丙氨酸扫描需要的top文件
@@ -27,5 +27,5 @@ MMPBSA.py -O  -i mm_gbsa_ala.in -cp com.top -rp pro.top -lp lig.top -y ../md_99.
 提交丙氨酸扫描任务 `nohup ./run.sh &`
 生成的一系列文件中，FINAL_RESULTS_MMPBSA.dat是最终的统计结果
 vim FINAL RESULTS MMPBSA.dat
-![输入图片说明](/imgs/2023-11-02/kA2kOB7xoED13DQG.png)
+![输入图片说明](/jmc_md/ala/ala2.png)
 
