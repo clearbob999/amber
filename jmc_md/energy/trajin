@@ -1,0 +1,9 @@
+#!/bin/sh
+parm ../../jmc/com.top
+trajin ../md_99.crd 6347 6347 1
+reference  ../../jmc/com.pdb
+center :1-1206 mass
+image center familiar
+rms reference @CA
+
+trajout md_low2.pdb pdb
