@@ -15,4 +15,4 @@
 73570.000  -463167.6569
 `vi summary.EPTOT`     /737570+enter 查找势能最小帧， 左下角显示帧数
 ![右下角6347即为帧数](/jmc_md/energy/energy_low.png)
- 4. `cpptraj -i trajin`提取轨迹能量最低的pdb
+ 5. `cpptraj -i trajin`提取轨迹能量最低的pdb
