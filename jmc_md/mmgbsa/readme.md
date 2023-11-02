@@ -62,7 +62,11 @@ MMPBSA.py -O -i MM_GBSA.in -o MM_GBSA.dat -eo MM_GBSA.csv -do MM_GBSA_DECOP.dat 
 `-lp` lig.top 文件配体的 top
 `-y` …/md2/md2.crd 文件轨迹文件
  
-
+ctril + ww 换光标
+## 运行
+```
+nohup ./run.sh &
+```
 ## 同时打开两个文件
 ```
 vi MM_GBSA.dat
@@ -70,4 +74,5 @@ vi MM_GBSA.dat
 ```
 :sp MM_PBSA.dat
 ```
-ctril + ww 换光标
+
+ 
