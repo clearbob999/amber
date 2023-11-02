@@ -1,0 +1,164 @@
+| Run on Wed Nov  1 16:27:07 2023
+|
+|Input file:
+|--------------------------------------------------------------
+|sample input file for running alanine scanning
+|&general
+|  startframe=10000,
+|  #endframe=1000,
+|  interval=200,
+|  verbose=1
+|/
+|&gb
+|  saltcon=0.1
+|/
+|&alanine_scanning
+|/
+|
+|--------------------------------------------------------------
+|MMPBSA.py Version=14.0
+|Complex topology file:           com.top
+|Receptor topology file:          pro.top
+|Ligand topology file:            lig.top
+|Mutant complex topology file:    com_mut.top
+|Mutant receptor topology file:   pro_mut.top
+|Mutant ligand topology file:     lig.top
+|Initial mdcrd(s):                ../md_99.crd
+|
+|Receptor mask:                  ":1-1205"
+|Ligand mask:                    ":1206"
+|Ligand residue name is "MOL"
+|
+|Calculations performed using 1.0 complex frames.
+|
+|Generalized Born ESURF calculated using 'LCPO' surface areas
+|
+|All units are reported in kcal/mole.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+GENERALIZED BORN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                 -10158.4277                0.0000              0.0000
+EEL                     -84042.8390                0.0000              0.0000
+EGB                     -12754.0140                0.0000              0.0000
+ESURF                      342.6727                0.0000              0.0000
+
+G gas                   -94201.2667                0.0000              0.0000
+G solv                  -12411.3413                0.0000              0.0000
+
+TOTAL                  -106612.6080                0.0000              0.0000
+
+
+Receptor:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                 -10075.2365                0.0000              0.0000
+EEL                     -84243.5230                0.0000              0.0000
+EGB                     -12764.5798                0.0000              0.0000
+ESURF                      347.0167                0.0000              0.0000
+
+G gas                   -94318.7595                0.0000              0.0000
+G solv                  -12417.5631                0.0000              0.0000
+
+TOTAL                  -106736.3226                0.0000              0.0000
+
+
+Ligand:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                     -8.0092                0.0000              0.0000
+EEL                        246.2902                0.0000              0.0000
+EGB                        -34.2414                0.0000              0.0000
+ESURF                        4.5716                0.0000              0.0000
+
+G gas                      238.2810                0.0000              0.0000
+G solv                     -29.6698                0.0000              0.0000
+
+TOTAL                      208.6112                0.0000              0.0000
+
+
+Differences (Complex - Receptor - Ligand):
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                    -75.1820                0.0000              0.0000
+EEL                        -45.6062                0.0000              0.0000
+EGB                         44.8072                0.0000              0.0000
+ESURF                       -8.9156                0.0000              0.0000
+
+DELTA G gas               -120.7882                0.0000              0.0000
+DELTA G solv                35.8916                0.0000              0.0000
+
+DELTA TOTAL                -84.8966                0.0000              0.0000
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Y338A MUTANT:
+GENERALIZED BORN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                 -10140.4558                0.0000              0.0000
+EEL                     -84027.5293                0.0000              0.0000
+EGB                     -12752.5857                0.0000              0.0000
+ESURF                      343.4656                0.0000              0.0000
+
+G gas                   -94167.9851                0.0000              0.0000
+G solv                  -12409.1201                0.0000              0.0000
+
+TOTAL                  -106577.1052                0.0000              0.0000
+
+
+Receptor:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                 -10064.2454                0.0000              0.0000
+EEL                     -84229.8885                0.0000              0.0000
+EGB                     -12763.5668                0.0000              0.0000
+ESURF                      347.4741                0.0000              0.0000
+
+G gas                   -94294.1339                0.0000              0.0000
+G solv                  -12416.0927                0.0000              0.0000
+
+TOTAL                  -106710.2266                0.0000              0.0000
+
+
+Ligand:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                     -8.0092                0.0000              0.0000
+EEL                        246.2902                0.0000              0.0000
+EGB                        -34.2414                0.0000              0.0000
+ESURF                        4.5716                0.0000              0.0000
+
+G gas                      238.2810                0.0000              0.0000
+G solv                     -29.6698                0.0000              0.0000
+
+TOTAL                      208.6112                0.0000              0.0000
+
+
+Differences (Complex - Receptor - Ligand):
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                    -68.2012                0.0000              0.0000
+EEL                        -43.9310                0.0000              0.0000
+EGB                         45.2225                0.0000              0.0000
+ESURF                       -8.5802                0.0000              0.0000
+
+DELTA G gas               -112.1322                0.0000              0.0000
+DELTA G solv                36.6423                0.0000              0.0000
+
+DELTA TOTAL                -75.4899                0.0000              0.0000
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+RESULT OF ALANINE SCANNING: (Y338A) DELTA DELTA G binding =   -9.4067  +/-    0.0000
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

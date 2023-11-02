@@ -1,0 +1,73 @@
+InputError: Unrecognized namelist pd
+  Enter `MMPBSA.py --help` for help
+InputError: Unrecognized namelist pd
+  Enter `MMPBSA.py --help` for help
+InputError: Unrecognized namelist pd
+  Enter `MMPBSA.py --help` for help
+InputError: Unrecognized namelist alanine_sacnning
+  Enter `MMPBSA.py --help` for help
+InputError: Unrecognized namelist alanine_sacnning
+  Enter `MMPBSA.py --help` for help
+Loading and checking parameter files for compatibility...
+cpptraj found! Using /data/Software/amber22/bin/cpptraj
+mmpbsa_py_energy found! Using /data/Software/amber22/bin/mmpbsa_py_energy
+Preparing trajectories for simulation...
+Mutating trajectories...
+50 frames were processed by cpptraj for use in calculation.
+
+Running calculations on normal system...
+
+Beginning GB calculations with /data/Software/amber22/bin/mmpbsa_py_energy
+  calculating complex contribution...
+Loading and checking parameter files for compatibility...
+cpptraj found! Using /data/Software/amber22/bin/cpptraj
+mmpbsa_py_energy found! Using /data/Software/amber22/bin/mmpbsa_py_energy
+Preparing trajectories for simulation...
+Mutating trajectories...
+1 frames were processed by cpptraj for use in calculation.
+
+Running calculations on normal system...
+
+Beginning GB calculations with /data/Software/amber22/bin/mmpbsa_py_energy
+  calculating complex contribution...
+  calculating receptor contribution...
+  calculating ligand contribution...
+
+Running calculations on mutant system...
+
+Beginning GB calculations with /data/Software/amber22/bin/mmpbsa_py_energy
+  calculating complex contribution...
+  calculating receptor contribution...
+  no mutation found in ligand; using unmutated files
+
+Timing:
+Total setup time:                           0.151 min.
+Creating trajectories with cpptraj:         0.009 min.
+Mutating trajectories:                      0.015 min.
+Total calculation time:                     2.694 min.
+
+Total GB calculation time:                  2.694 min.
+
+Statistics calculation & output writing:    0.000 min.
+Total time taken:                           2.869 min.
+
+
+MMPBSA.py Finished! Thank you for using. Please cite us if you publish this work with this paper:
+   Miller III, B. R., McGee Jr., T. D., Swails, J. M. Homeyer, N. Gohlke, H. and Roitberg, A. E.
+   J. Chem. Theory Comput., 2012, 8 (9) pp 3314--3321
+  calculating receptor contribution...
+  File "/data/Software/amber22/bin/MMPBSA.py", line 100, in <module>
+    app.run_mmpbsa()
+  File "/data/Software/amber22/lib/python3.9/site-packages/MMPBSA_mods/main.py", line 218, in run_mmpbsa
+    self.calc_list.run(rank, self.stdout)
+  File "/data/Software/amber22/lib/python3.9/site-packages/MMPBSA_mods/calculation.py", line 81, in run
+    calc.setup()
+  File "/data/Software/amber22/lib/python3.9/site-packages/MMPBSA_mods/calculation.py", line 199, in setup
+    raise IOError("Input file (%s) doesn't exist" % self.input_file)
+OSError: Input file (_MMPBSA_gb.mdin) doesn't exist
+
+Fatal Error! 
+All files have been retained for your error investigation: 
+You should begin by examining the output files of the first failed calculation.
+Consult the "Temporary Files" subsection of the MMPBSA.py chapter in the
+manual for file naming conventions.

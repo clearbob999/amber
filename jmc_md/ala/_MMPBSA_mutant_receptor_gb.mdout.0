@@ -1,0 +1,29 @@
+Reading parm file (pro_mut.top)
+title:
+default_name                                                                    
+	mm_options:  e_debug=2
+	mm_options:  gb=5
+	mm_options:  rgbmax=25.000000
+	mm_options:  gbsa=0
+	mm_options:  surften=0.007200
+	mm_options:  cut=999.000000
+	mm_options:  epsext=78.300000
+	mm_options:  kappa=0.103952
+Processing ASCII trajectory (_MMPBSA_mutant_receptor.mdcrd.0)
+
+Processing frame 1
+      iter    Total       bad      vdW     elect   nonpolar   genBorn      frms
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2675) enb14 -->  4402.577
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2676) eel14 --> 47387.537
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2734) enb --> -10064.245
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2735) eel --> -84229.889
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2736) e_gb --> -12763.567
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2737) esurf -->     0.000
+/data/Software/amber22_src/AmberTools/src/sff/eff.c(2738) evdwnp -->     0.000
+ff:     0 -26354.61  28912.98  -5661.67 -36842.35      0.00 -12763.57  1.81e+01
+ BOND    =     3589.9888  ANGLE   =     9853.7659  DIHED      =    15469.2210
+ VDWAALS =   -10064.2454  EEL     =   -84229.8885  EGB        =   -12763.5668
+ 1-4 VDW =     4402.5774  1-4 EEL =    47387.5375  RESTRAINT  =        0.0000
+ ESURF   =        0.0000
+
+MM/GBSA processing done!

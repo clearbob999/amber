@@ -1,0 +1,21 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+
+loadamberparams ligand.frcmod
+loadamberparams frcmod.ionsjc_tip3p
+
+p = loadpdb pro_mutant.pdb
+l = loadmol2 ligand.mol2
+c = combine { p l }
+
+
+savepdb p pro_mut.pdb
+savepdb l lig_mut.pdb 
+savepdb c com_mut.pdb
+saveamberparm p pro_mut.top pro_mut.crd 
+saveamberparm l lig_mut.top lig_mut.crd 
+saveamberparm c com_mut.top com_mut.crd
+
+quit
+####
