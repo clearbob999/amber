@@ -74,6 +74,10 @@ vi MM_GBSA.dat
 ```
 :sp MM_PBSA.dat
 ```
-##
+## 输出结果示例
+残疾分解的结果MM_GBSA_DECOMP.dat，详细的每一帧的结果在MM_GBSA_DECOMP.csv
+MM_GBSA_DECOMP.dat可在excel中打开，根据total列进行排序
+![输入图片说明](/jmc_md/mmgbsa/mmgbsa1.png)
+
 
  
