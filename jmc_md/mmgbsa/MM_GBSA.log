@@ -1,0 +1,27 @@
+Loading and checking parameter files for compatibility...
+cpptraj found! Using /data/Software/amber22/bin/cpptraj
+sander found! Using /data/Software/amber22/bin/sander
+Preparing trajectories for simulation...
+46 frames were processed by cpptraj for use in calculation.
+
+Running calculations on normal system...
+
+Beginning GB calculations with /data/Software/amber22/bin/sander
+  calculating complex contribution...
+  calculating receptor contribution...
+  calculating ligand contribution...
+
+Timing:
+Total setup time:                           0.001 hr.
+Creating trajectories with cpptraj:         0.001 hr.
+Total calculation time:                     2.329 hr.
+
+Total GB calculation time:                  2.329 hr.
+
+Statistics calculation & output writing:    0.001 hr.
+Total time taken:                           2.332 hr.
+
+
+MMPBSA.py Finished! Thank you for using. Please cite us if you publish this work with this paper:
+   Miller III, B. R., McGee Jr., T. D., Swails, J. M. Homeyer, N. Gohlke, H. and Roitberg, A. E.
+   J. Chem. Theory Comput., 2012, 8 (9) pp 3314--3321

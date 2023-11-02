@@ -1,0 +1,33 @@
+&general
+startframe = 1000
+#endframe = 200
+interval = 200
+use_sander = 1
+netcdf = 0
+keep_files = 0
+debug_printlevel = 0
+verbose = 1
+entropy = 0
+/
+&gb
+igb = 2
+saltcon = 0
+ifqnt = 0
+molsurf = 0
+surften = 0.005
+surfoff = 0
+/
+&decomp
+idecomp = 1
+dec_verbose = 0
+/
+# /&nmode
+# nmstartframe = 1
+# nmendframe = 10
+# nminterval = 1
+# dielc = 1
+# maxcyc = 500000
+# drms = 0.001
+# nmode_igb = 0
+# /
+

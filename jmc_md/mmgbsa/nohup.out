@@ -1,0 +1,37 @@
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+Traceback (most recent call last):
+  File "/data/Software/amber22/bin/MMPBSA.py.MPI", line 53, in <module>
+Traceback (most recent call last):
+  File "/data/Software/amber22/bin/MMPBSA.py.MPI", line 53, in <module>
+    from mpi4py import MPI
+    from mpi4py import MPI
+ModuleNotFoundError: No module named 'mpi4py'
+
+During handling of the above exception, another exception occurred:
+
+ModuleNotFoundError: No module named 'mpi4py'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/data/Software/amber22/bin/MMPBSA.py.MPI", line 55, in <module>
+  File "/data/Software/amber22/bin/MMPBSA.py.MPI", line 55, in <module>
+    raise MMPBSA_Error('Could not import mpi4py package! Use serial version '
+    raise MMPBSA_Error('Could not import mpi4py package! Use serial version '
+MMPBSA_mods.exceptions.MMPBSA_Error: Could not import mpi4py package! Use serial version or install mpi4py.
+MMPBSA_mods.exceptions.MMPBSA_Error: Could not import mpi4py package! Use serial version or install mpi4py.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[37053,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+STOP PMEMD Terminated Abnormally!
+STOP PMEMD Terminated Abnormally!
