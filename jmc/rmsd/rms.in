@@ -1,0 +1,20 @@
+parm  ../../jmc/com.top
+trajin ../md_99.crd 1 last 1
+
+reference ../../jmc/com.pdb
+center :1-1205 mass
+image center familiar
+rms reference @CA
+
+##rmsd
+rms reference mass out rms_pro.dat :1-1205@CA,C,N time 0.01
+rms reference mass out rms_lig.dat :1206          time 0.01
+
+##b-factor
+atomicfluct out bfactor_residue.dat :1-1205@CA,C,N byres  bfactor
+atomicfluct out bfactor_allatom.dat :1-1205@CA,C,N byatom bfactor
+
+## rmsf
+atomicfluct out rmsf_residue.dat :1-1205@CA,C,N byres
+atomicfluct out rmsf_allatom.dat :1-1205@CA,C,N byatom
+

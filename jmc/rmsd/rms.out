@@ -1,0 +1,149 @@
+
+CPPTRAJ: Trajectory Analysis. V6.4.4 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 11/06/23 15:56:31
+| Available memory: 12.903 GB
+
+INPUT: Reading input from 'STDIN'
+  [parm ../../jmc/com.top]
+	Reading '../../jmc/com.top' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin ../md_99.crd 1 last 1]
+	Reading '../md_99.crd' as Amber Trajectory
+Warning: Trajectory only contains box lengths and topology has no box info.
+Warning: To set box angles for topology use the 'parmbox' command.
+Warning: Box alpha angle is zero.
+Warning: Box beta angle is zero.
+Warning: Box gamma angle is zero.
+  [reference ../../jmc/com.pdb]
+	Reading '../../jmc/com.pdb' as PDB
+Warning: PDB line length is short (67 chars, expected 80).
+	Setting active reference for distance-based masks: 'com.pdb'
+  [center :1-1205 mass]
+    CENTER: Centering coordinates using center of mass of atoms in mask (:1-1205) to
+	box center.
+  [image center familiar]
+    IMAGE: By molecule to box center based on center of mass using all atoms
+           Triclinic On, familiar shape.
+  [rms reference @CA]
+    RMSD: (@CA), reference is "com.pdb:1" (@CA).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [rms reference mass out rms_pro.dat :1-1205@CA,C,N time 0.01]
+    RMSD: (:1-1205@CA,C,N), reference is "com.pdb:1" (:1-1205@CA,C,N), mass-weighted.
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [rms reference mass out rms_lig.dat :1206 time 0.01]
+    RMSD: (:1206), reference is "com.pdb:1" (:1206), mass-weighted.
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [atomicfluct out bfactor_residue.dat :1-1205@CA,C,N byres bfactor]
+    ATOMICFLUCT: calculating B factors over residues.
+	Output to file bfactor_residue.dat
+	Atom mask: [:1-1205@CA,C,N]
+	Start: 1  Stop: Final frame
+  [atomicfluct out bfactor_allatom.dat :1-1205@CA,C,N byatom bfactor]
+    ATOMICFLUCT: calculating B factors for atoms.
+	Output to file bfactor_allatom.dat
+	Atom mask: [:1-1205@CA,C,N]
+	Start: 1  Stop: Final frame
+  [atomicfluct out rmsf_residue.dat :1-1205@CA,C,N byres]
+    ATOMICFLUCT: calculating atomic positional fluctuations over residues.
+	Output to file rmsf_residue.dat
+	Atom mask: [:1-1205@CA,C,N]
+	Start: 1  Stop: Final frame
+  [atomicfluct out rmsf_allatom.dat :1-1205@CA,C,N byatom]
+    ATOMICFLUCT: calculating atomic positional fluctuations for atoms.
+	Output to file rmsf_allatom.dat
+	Atom mask: [:1-1205@CA,C,N]
+	Start: 1  Stop: Final frame
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: com.top, 18817 atoms, 1206 res, box: None, 4 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'md_99.crd' is an AMBER trajectory, Parm com.top (reading 10000 of 10000)
+  Coordinate processing will occur on 10000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: com.pdb:1
+	Active reference frame for distance-based masks is 'com.pdb:1'
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'com.top' (9 actions):
+  0: [center :1-1205 mass]
+	Mask [:1-1205] corresponds to 18752 atoms.
+Warning: Box center specified but no box information.
+Warning: Setup incomplete for [center]: Skipping
+  1: [image center familiar]
+Warning: Topology com.top does not contain box information.
+Warning: Setup incomplete for [image]: Skipping
+  2: [rms reference @CA]
+	Target mask: [@CA](1205)
+	Reference topology: com.top
+	Reference mask: [@CA](1205)
+  3: [rms reference mass out rms_pro.dat :1-1205@CA,C,N time 0.01]
+	Target mask: [:1-1205@CA,C,N](3615)
+	Reference topology: com.top
+	Reference mask: [:1-1205@CA,C,N](3615)
+  4: [rms reference mass out rms_lig.dat :1206 time 0.01]
+	Target mask: [:1206](65)
+	Reference topology: com.top
+	Reference mask: [:1206](65)
+  5: [atomicfluct out bfactor_residue.dat :1-1205@CA,C,N byres bfactor]
+	Mask [:1-1205@CA,C,N] corresponds to 3615 atoms.
+  6: [atomicfluct out bfactor_allatom.dat :1-1205@CA,C,N byatom bfactor]
+	Mask [:1-1205@CA,C,N] corresponds to 3615 atoms.
+  7: [atomicfluct out rmsf_residue.dat :1-1205@CA,C,N byres]
+	Mask [:1-1205@CA,C,N] corresponds to 3615 atoms.
+  8: [atomicfluct out rmsf_allatom.dat :1-1205@CA,C,N byatom]
+	Mask [:1-1205@CA,C,N] corresponds to 3615 atoms.
+----- md_99.crd (1-10000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 10000 frames and processed 10000 frames.
+TIME: Avg. throughput= 158.2203 frames / second.
+
+ACTION OUTPUT:
+    ATOMICFLUCT: Calculating fluctuations for 10000 sets.
+    ATOMICFLUCT: Calculating fluctuations for 10000 sets.
+    ATOMICFLUCT: Calculating fluctuations for 10000 sets.
+    ATOMICFLUCT: Calculating fluctuations for 10000 sets.
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (7 total):
+	RMSD_00002 "RMSD_00002" (double, rms), size is 10000 (80.000 kB)
+	RMSD_00003 "RMSD_00003" (double, rms), size is 10000 (80.000 kB)
+	RMSD_00004 "RMSD_00004" (double, rms), size is 10000 (80.000 kB)
+	Fluct_00005 "B-factors" (X-Y mesh), size is 1205 (19.280 kB)
+	Fluct_00006 "B-factors" (X-Y mesh), size is 3615 (57.840 kB)
+	Fluct_00007 "AtomicFlx" (X-Y mesh), size is 1205 (19.280 kB)
+	Fluct_00008 "AtomicFlx" (X-Y mesh), size is 3615 (57.840 kB)
+    Total data set memory usage is at least 394.240 kB
+
+DATAFILES (6 total):
+  rms_pro.dat (Standard Data File):  RMSD_00003
+  rms_lig.dat (Standard Data File):  RMSD_00004
+  bfactor_residue.dat (Standard Data File):  B-factors
+  bfactor_allatom.dat (Standard Data File):  B-factors
+  rmsf_residue.dat (Standard Data File):  AtomicFlx
+  rmsf_allatom.dat (Standard Data File):  AtomicFlx
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 63.2030 s ( 99.96%)
+TIME:		Action Post        : 0.0007 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0234 s (  0.04%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 63.2271 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 63.2882 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
